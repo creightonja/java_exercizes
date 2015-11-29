@@ -33,5 +33,25 @@ public class Main {
         BigDecimal bigSum = bigValue.add(bigValue).add(bigValue);
         System.out.println(bigSum);
 
+        int intValue1 = 56;
+        int intValue2 = intValue1;
+        System.out.println(intValue2);
+
+        long longValue1 = intValue1;
+        System.out.println(longValue1);
+
+        short shortValue1 = (short) intValue1;
+        System.out.println(shortValue1);
+
+        //Smaller memory type will convert to 0 when unsupported by range
+        int intValue3 = 1024;
+        byte byteValue = (byte) intValue3;
+        System.out.println(byteValue);
+
+        //Narrowing to int from a float or double will truncate all remainder.  Output = 3.
+        double doubleValue = 3.9999999d;
+        int intValue4 = (int) doubleValue;
+        System.out.println(intValue4);
+
     }
 }
