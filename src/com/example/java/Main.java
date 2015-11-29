@@ -1,5 +1,7 @@
 package com.example.java;
 
+import java.math.BigDecimal;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -20,5 +22,16 @@ public class Main {
         System.out.println("Long: "+ l);
         System.out.println("Float: "+ f);
         System.out.println("Double: "+ d);
+
+        double value = .012d;
+        double psum = value + value + value;
+        System.out.println(psum);
+
+        String strValue = Double.toString(value);
+        System.out.println(strValue);
+        BigDecimal bigValue = new BigDecimal(strValue);
+        BigDecimal bigSum = bigValue.add(bigValue).add(bigValue);
+        System.out.println(bigSum);
+
     }
 }
